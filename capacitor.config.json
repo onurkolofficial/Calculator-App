@@ -1,0 +1,9 @@
+{
+  "appId": "com.onurkol.app.calculator",
+  "appName": "Hesap Makinesi",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}

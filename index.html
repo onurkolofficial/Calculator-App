@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>MathPro | Premium Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'bg-deep': '#000000', // True black for OLED
+              'bg-surface': '#121212', // Slightly lighter for surfaces
+              'bg-light': '#f0f2f5',
+            },
+            boxShadow: {
+              'neumorph': '20px 20px 60px #d1d9e6, -20px -20px 60px #ffffff',
+              'neumorph-dark': '5px 5px 10px #0a0a0a, -5px -5px 10px #1a1a1a',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        :root {
+            --accent-violet: #8b5cf6;
+            --sat: env(safe-area-inset-top);
+            --sab: env(safe-area-inset-bottom);
+            transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            margin: 0;
+            /* Prevent pull-to-refresh on mobile to feel like native app */
+            overscroll-behavior-y: none;
+            /* Handle safe areas */
+            padding-top: var(--sat);
+            padding-bottom: var(--sab);
+        }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        
+        .glass-panel {
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            transition: all 0.3s ease;
+        }
+
+        .dark .glass-panel {
+            background: rgba(10, 10, 10, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .light .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .calc-display-shadow {
+            /* Removed heavy inner shadow for a cleaner look */
+        }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { 
+            background: rgba(139, 92, 246, 0.3); 
+            border-radius: 20px; 
+        }
+
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Smooth Theme Transition */
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@capacitor/app": "https://esm.sh/@capacitor/app@^8.0.0"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
