@@ -5,8 +5,6 @@ for update [https://github.com/onurkolofficial/SimpleNotes-Android](https://gith
 
 This contains everything you need to run your app locally.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1NYTWoRZmiYJ2W4gpfdHJ90rb4ZqI_WFn
-
 ## Run Locally
 
 **Prerequisites:**  Node.js
