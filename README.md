@@ -1,3 +1,8 @@
+for update https://github.com/onurkolofficial/Calculator-Android app.
+
+Play Store: https://play.google.com/store/apps/details?id=com.onurkol.app.calculator
+<hr>
+
 # Run and deploy app
 
 This contains everything you need to run your app locally.
